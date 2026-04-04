@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>研究論文 | 樋口豊治</title>
-  <meta name="description" content="樋口豊治の研究論文ページ。生存‐破綻モデル（SBM）研究プログラムの入口論文および中核三部作への導線をまとめています。">
+  <meta name="description" content="樋口豊治の研究論文ページ。生存‐破綻モデル（SBM）研究プログラムの入口論文、概要ページ、PDF、DOI、Zenodoレコード、ORCIDへのアクセスを提供します。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://toyoharuhiguchi.github.io/ja/">
 
@@ -13,227 +12,229 @@
   <meta name="citation_language" content="ja">
 
   <style>
+    :root {
+      --text: #1f2328;
+      --muted: #5b6470;
+      --border: #d8dee4;
+      --panel: #fafbfc;
+      --panel-2: #f4f7fb;
+      --accent: #0b57d0;
+      --accent-soft: #eaf2ff;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN",
-                   "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
-      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 44px 20px 56px;
+      color: var(--text);
       background: #fff;
     }
-    h1, h2, h3 {
-      line-height: 1.4;
-      margin-top: 1.6em;
+    h1, h2, h3 { line-height: 1.3; color: #16202a; }
+    h1 { font-size: 2.2rem; margin: 0 0 0.15em; letter-spacing: -0.02em; }
+    h2 { font-size: 1.9rem; margin-top: 2.4em; margin-bottom: 0.7em; }
+    h3 { font-size: 1.45rem; margin-top: 0; margin-bottom: 0.65em; }
+    p { margin: 0 0 1em; }
+    .subtitle { color: var(--muted); margin-top: 0; margin-bottom: 0.9em; font-size: 1.05rem; }
+    .lang-switch { color: var(--muted); margin-top: 0; margin-bottom: 2.4em; font-size: 1rem; }
+    .intro {
+      background: linear-gradient(to bottom, #fbfcfe, #f7f9fc);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 2.2em;
     }
-    h1 {
-      font-size: 2em;
-      margin-top: 0;
+    .author-block p { margin: 0.3em 0; }
+    .highlight-box {
+      background: var(--panel-2);
+      border: 1px solid #dbe7fb;
+      border-left: 5px solid var(--accent);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 1.2em;
+      margin-bottom: 1.6em;
     }
-    h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.25em;
-    }
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .paper {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 30px;
+      background: var(--panel);
     }
     .paper-label {
-      font-weight: bold;
-      margin-top: 1.2em;
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
     }
-    .meta {
-      color: #444;
-      margin: 0.3em 0 0.8em 0;
-    }
+    .meta { font-size: 0.97rem; color: #4d5662; margin-bottom: 1.15em; }
+    .links { margin-top: 14px; }
     .links a {
-      margin-right: 14px;
-      white-space: nowrap;
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
-    .note {
-      font-size: 0.96em;
-      color: #333;
-      background: #f7f7f7;
-      padding: 12px 14px;
-      border-left: 4px solid #bbb;
-      margin: 1.2em 0;
-    }
-    .lang-switch {
-      margin: 1em 0 1.5em 0;
-      font-size: 0.95em;
-    }
-    .footer {
-      margin-top: 2.5em;
-      color: #555;
-      font-size: 0.95em;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 52px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>樋口豊治</h1>
+    <p class="subtitle">研究論文</p>
+    <p class="lang-switch">English page: <a href="https://toyoharuhiguchi.github.io/">https://toyoharuhiguchi.github.io/</a></p>
+  </header>
 
-  <h1>樋口豊治</h1>
+  <section class="intro">
+    <p>
+      生存‐破綻モデル（SBM）は、構成的成立条件、存続可能性、基本的実行可能性、継続が最適化に先立つという立場から経済主体を捉える基礎理論です。
+    </p>
+    <p>
+      このサイトは、SBM研究プログラムの公式研究ページであり、短い入口論文と、SBMを基礎づけ、展開し、理論的に位置づける中核三部作を掲載しています。
+    </p>
+  </section>
 
-  <p><strong>研究論文</strong></p>
+  <section>
+    <div class="highlight-box">
+      <p>
+        <strong>重要:</strong> 本研究プログラムにおいて、日本語版テキストが正文であり、英語版テキストは参照用翻訳です。厳密な解釈、引用、理論的検証にあたっては、日本語版を一次資料として扱ってください。
+      </p>
+    </div>
+  </section>
 
-  <div class="lang-switch">
-    English page: <a href="https://toyoharuhiguchi.github.io/">https://toyoharuhiguchi.github.io/</a>
-  </div>
+  <section class="author-block">
+    <h2>著者</h2>
+    <p><strong>氏名:</strong> 樋口豊治</p>
+    <p><strong>立場:</strong> 独立研究者（経済理論）</p>
+    <p><strong>英語版ホームページ:</strong> <a href="https://toyoharuhiguchi.github.io/">https://toyoharuhiguchi.github.io/</a></p>
+    <p><strong>日本語版ホームページ:</strong> <a href="https://toyoharuhiguchi.github.io/ja/">https://toyoharuhiguchi.github.io/ja/</a></p>
+    <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0005-6809-567X">0009-0005-6809-567X</a></p>
+  </section>
 
-  <p>
-    生存‐破綻モデル（Survival-Breakdown Model; SBM）は、
-    構成的成立条件、存続可能性、基本的実行可能性、継続が、
-    最適化に先立つという立場から経済主体を捉える基礎理論です。
-  </p>
+  <section>
+    <h2>このページについて</h2>
+    <p>
+      このページでは、樋口豊治による研究論文について、概要ページ、PDFファイル、DOI情報、Zenodoレコード、および著者識別情報へのアクセスを提供しています。
+    </p>
+    <p>
+      中心にあるのは、生存‐破綻モデル（SBM）研究プログラムです。その構成は、短い入口論文と、SBMの基礎・展開・理論的位置づけを担う中核三部作から成ります。
+    </p>
+  </section>
 
-  <p>
-    このページは、SBM研究プログラムの公式研究ページとして、
-    入口論文と中核三部作への導線をまとめたものです。
-  </p>
+  <section>
+    <h2>研究プログラムの位置づけ</h2>
+    <div class="highlight-box">
+      <p>
+        <strong>入口論文</strong> は、より広いSBM研究プログラムへの短い導入であり、中核論文群がどのように接続されるかを示します。
+      </p>
+      <p>
+        <strong>中核論文1</strong> は、SBMの基礎構造を提示します。
+      </p>
+      <p>
+        <strong>中核論文2</strong> は、需要供給理論、一般均衡理論、マクロ経済学を、普遍的第一原理ではなく条件付き特殊理論として再分類することで、SBMを展開します。
+      </p>
+      <p>
+        <strong>中核論文3</strong> は、主要な批判を整理し、SBMと標準理論の関係を、単純な対立ではなく理論的順序の再配置として明確にします。
+      </p>
+    </div>
+  </section>
 
-  <div class="note">
-    重要：本研究プログラムにおいて、日本語版テキストが正本です。
-    英語版テキストは参照用翻訳です。厳密な解釈、引用、理論的検証にあたっては、
-    日本語版を一次資料として扱ってください。
-  </div>
+  <section>
+    <h2>入口論文</h2>
 
-  <h2>著者</h2>
+    <article class="paper">
+      <div class="paper-label">入口論文</div>
+      <h3><a href="papers/before-optimization.html">最適化に先立って：生存‐破綻モデル（SBM）への簡潔な導入</a></h3>
+      <div class="meta">
+        <strong>公開日:</strong> 2026年4月2日<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.19387403">https://doi.org/10.5281/zenodo.19387403</a>
+      </div>
+      <p>
+        生存‐破綻モデル（SBM）と、それを中心とする三部作研究プログラムへの短い導入論文です。この論文は、SBMの中心的主張を簡潔に提示し、既存の中核論文群がどのように接続されるかを説明します。
+      </p>
+      <div class="links">
+        <a href="papers/before-optimization.html">概要ページ</a>
+        <a href="https://zenodo.org/records/19387403">Zenodo Record</a>
+        <a href="../papers/Before_Optimization_A_Short_Introduction_to_the_Survival_Breakdown_Model_2026-04-02_v1.0.pdf">日本語原文PDF</a>
+        <a href="../papers/Before_Optimization_A_Short_Introduction_to_the_Survival_Breakdown_Model_English_Reference_Translation.pdf">英語PDF</a>
+      </div>
+    </article>
+  </section>
 
-  <p>氏名：樋口豊治</p>
-  <p>立場：独立研究者（経済理論）</p>
-  <p>
-    英語版ホームページ：
-    <a href="https://toyoharuhiguchi.github.io/">https://toyoharuhiguchi.github.io/</a><br>
-    日本語版ホームページ：
-    <a href="https://toyoharuhiguchi.github.io/ja/">https://toyoharuhiguchi.github.io/ja/</a><br>
-    ORCID：
-    <a href="https://orcid.org/0009-0005-6809-567X">0009-0005-6809-567X</a>
-  </p>
+  <section>
+    <h2>SBM中核論文</h2>
 
-  <h2>このページについて</h2>
+    <article class="paper">
+      <div class="paper-label">中核論文1: 基礎</div>
+      <h3><a href="papers/sbm-integrated-foundation.html">生存‐破綻モデル：経済主体性の統合基礎理論</a></h3>
+      <div class="meta">
+        <strong>公開日:</strong> 2026年3月17日<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.19020442">https://doi.org/10.5281/zenodo.19020442</a>
+      </div>
+      <p>
+        SBMを、構成的成立条件、存続可能性、基本的実行可能性、継続が最適化に先立つ理論として統合的に定式化した基礎論文です。
+      </p>
+      <div class="links">
+        <a href="papers/sbm-integrated-foundation.html">概要ページ</a>
+        <a href="https://zenodo.org/records/19020442">Zenodo Record</a>
+        <a href="../papers/SBM_Integrated_Foundation_2026-03-17_v2.0.pdf">日本語原文PDF</a>
+        <a href="../papers/SBM_Integrated_Foundation_2026-03-17_English_Reference_Translation.pdf">英語PDF</a>
+      </div>
+    </article>
 
-  <p>
-    このページでは、樋口豊治による研究論文について、
-    論文概要、PDF、DOI、Zenodoレコード、および著者識別情報へのアクセスを提供しています。
-  </p>
+    <article class="paper">
+      <div class="paper-label">中核論文2: 展開</div>
+      <h3><a href="papers/sbm-special-cases.html">需要供給理論・一般均衡理論・マクロ経済学は特殊ケースである：生存‐破綻モデルのもとでの主流経済学の再分類</a></h3>
+      <div class="meta">
+        <strong>公開日:</strong> 2026年3月30日<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.19312582">https://doi.org/10.5281/zenodo.19312582</a>
+      </div>
+      <p>
+        標準的経済学の主要部分を、SBMのもとで条件付きかつ下位の特殊ケースとして再分類することで、SBMを理論的に展開した論文です。
+      </p>
+      <div class="links">
+        <a href="papers/sbm-special-cases.html">概要ページ</a>
+        <a href="https://zenodo.org/records/19312582">Zenodo Record</a>
+        <a href="../papers/SBM_Demand_Supply_General_Equilibrium_and_Macroeconomics_as_Special_Cases_2026-03-30_v1.0.pdf">日本語原文PDF</a>
+        <a href="../papers/SBM_Demand_Supply_General_Equilibrium_and_Macroeconomics_as_Special_Cases_English_Reference_Translation.pdf">英語PDF</a>
+      </div>
+    </article>
 
-  <p>
-    中心にあるのは、生存‐破綻モデル（SBM）研究プログラムです。
-    その構成は、短い入口論文と、SBMの基礎定式化・展開・理論的位置づけを担う
-    中核三部作から成ります。
-  </p>
+    <article class="paper">
+      <div class="paper-label">中核論文3: 位置づけ</div>
+      <h3><a href="papers/sbm-criticisms-standard-theory.html">生存‐破綻モデルと標準理論：主要反論の整理と理論的順序の再定位</a></h3>
+      <div class="meta">
+        <strong>公開日:</strong> 2026年3月31日<br>
+        <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.19330520">https://doi.org/10.5281/zenodo.19330520</a>
+      </div>
+      <p>
+        主要な批判を整理し、SBMと標準理論の関係を明確化する位置づけ論文です。
+      </p>
+      <div class="links">
+        <a href="papers/sbm-criticisms-standard-theory.html">概要ページ</a>
+        <a href="https://zenodo.org/records/19330520">Zenodo Record</a>
+        <a href="../papers/SBM_Criticisms_and_Its_Relation_to_Standard_Theory_2026-03-31_v1.0.pdf">日本語原文PDF</a>
+        <a href="../papers/SBM_Criticisms_and_Its_Relation_to_Standard_Theory_English_Reference_Translation.pdf">英語PDF</a>
+      </div>
+    </article>
+  </section>
 
-  <h2>研究プログラムの位置づけ</h2>
-
-  <p>
-    入口論文は、SBM研究プログラム全体への短い導入として位置づけられます。
-  </p>
-
-  <p>
-    中核論文1は、SBMの基礎構造を提示します。
-  </p>
-
-  <p>
-    中核論文2は、需要供給理論、一般均衡理論、マクロ経済学を、
-    普遍的第一原理ではなく、条件付きの特殊理論として再分類することで、
-    SBMを展開します。
-  </p>
-
-  <p>
-    中核論文3は、主要な批判を整理し、
-    SBMと標準理論の関係を、単純な対立ではなく理論的順序の再配置として明確化します。
-  </p>
-
-  <h2>入口論文</h2>
-
-  <p class="paper-label">入口論文</p>
-  <h3>最適化に先立って<br>生存―破綻モデル（SBM）への簡潔な導入</h3>
-
-  <p class="meta">
-    公開日：2026年4月2日<br>
-    DOI：<a href="https://doi.org/10.5281/zenodo.19387403">https://doi.org/10.5281/zenodo.19387403</a>
-  </p>
-
-  <p>
-    生存‐破綻モデル（SBM）と、それを中心とする三部作研究プログラムへの短い導入論文です。
-    SBMの中心的主張を簡潔に提示し、既存の中核論文群がどのように接続されるかを説明します。
-  </p>
-
-  <p class="links">
-    <a href="https://toyoharuhiguchi.github.io/ja/papers/before-optimization.html">概要ページ</a>
-    <a href="https://zenodo.org/records/19387403">Zenodo</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/Before_Optimization_A_Short_Introduction_to_the_Survival_Breakdown_Model_2026-04-02_v1.0.pdf">日本語PDF</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/Before_Optimization_A_Short_Introduction_to_the_Survival_Breakdown_Model_English_Reference_Translation.pdf">英語PDF</a>
-  </p>
-
-  <h2>SBM中核論文</h2>
-
-  <p class="paper-label">中核論文1：基礎</p>
-  <h3>生存―破綻モデル<br>経済主体性の統合基礎理論</h3>
-
-  <p class="meta">
-    公開日：2026年3月17日<br>
-    DOI：<a href="https://doi.org/10.5281/zenodo.19020442">https://doi.org/10.5281/zenodo.19020442</a>
-  </p>
-
-  <p>
-    SBMを、構成的成立条件、存続可能性、基本的実行可能性、継続が
-    最適化に先立つ理論として統合的に定式化した基礎論文です。
-  </p>
-
-  <p class="links">
-    <a href="https://toyoharuhiguchi.github.io/ja/papers/sbm-integrated-foundation.html">概要ページ</a>
-    <a href="https://zenodo.org/records/19020442">Zenodo</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Integrated_Foundation_2026-03-17_v2.0.pdf">日本語PDF</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Integrated_Foundation_2026-03-17_English_Reference_Translation.pdf">英語PDF</a>
-  </p>
-
-  <p class="paper-label">中核論文2：展開</p>
-  <h3>需要供給・一般均衡・マクロ経済学は特殊ケースである<br>生存―破綻モデルのもとでの主流経済学の再分類</h3>
-
-  <p class="meta">
-    公開日：2026年3月30日<br>
-    DOI：<a href="https://doi.org/10.5281/zenodo.19312582">https://doi.org/10.5281/zenodo.19312582</a>
-  </p>
-
-  <p>
-    標準的経済学の主要部分を、SBMの下位にある条件付き特殊理論として再分類することで、
-    SBMを理論的に展開した論文です。
-  </p>
-
-  <p class="links">
-    <a href="https://toyoharuhiguchi.github.io/ja/papers/sbm-special-cases.html">概要ページ</a>
-    <a href="https://zenodo.org/records/19312582">Zenodo</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Demand_Supply_General_Equilibrium_and_Macroeconomics_as_Special_Cases_2026-03-30_v1.0.pdf">日本語PDF</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Demand_Supply_General_Equilibrium_and_Macroeconomics_as_Special_Cases_English_Reference_Translation.pdf">英語PDF</a>
-  </p>
-
-  <p class="paper-label">中核論文3：位置づけ</p>
-  <h3>生存―破綻モデルと標準理論<br>主要反論の整理と理論順序の再定位</h3>
-
-  <p class="meta">
-    公開日：2026年3月31日<br>
-    DOI：<a href="https://doi.org/10.5281/zenodo.19330520">https://doi.org/10.5281/zenodo.19330520</a>
-  </p>
-
-  <p>
-    主要な批判を整理し、SBMと標準理論の関係を理論的順序の再配置として明確化した論文です。
-  </p>
-
-  <p class="links">
-    <a href="https://toyoharuhiguchi.github.io/ja/papers/sbm-criticisms-standard-theory.html">概要ページ</a>
-    <a href="https://zenodo.org/records/19330520">Zenodo</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Criticisms_and_Its_Relation_to_Standard_Theory_2026-03-31_v1.0.pdf">日本語PDF</a>
-    <a href="https://toyoharuhiguchi.github.io/papers/SBM_Criticisms_and_Its_Relation_to_Standard_Theory_English_Reference_Translation.pdf">英語PDF</a>
-  </p>
-
-  <div class="footer">
-    最終更新：2026年4月4日<br>
-    © Toyoharu Higuchi. All rights reserved.
-  </div>
-
+  <footer>
+    <p>最終更新: 2026年4月4日</p>
+    <p>© Toyoharu Higuchi. All rights reserved.</p>
+  </footer>
 </body>
 </html>
